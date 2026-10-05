@@ -1,0 +1,414 @@
+/* ============ Reset & Base ============ */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;   /* iOS: cegah auto-zoom teks */
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: #1c1c1c;
+  background: #f7f6f3;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ============ Header ============ */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(247, 246, 243, 0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #e3e0d9;
+  z-index: 10;
+  padding-top: env(safe-area-inset-top);   /* iOS notch */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 24px;
+  height: 24px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.brand-name { font-size: 17px; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav::-webkit-scrollbar { display: none; }
+
+.nav a {
+  margin-left: 24px;
+  font-size: 14px;
+  color: #4a4a4a;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav a:first-child { margin-left: 0; }
+
+.nav a:hover { color: #b08a3e; }
+
+/* ============ Hero ============ */
+.hero {
+  padding: 96px 0 72px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(26px, 5vw, 42px);
+  font-weight: 600;
+  margin: 0 0 16px;
+  letter-spacing: -0.5px;
+}
+
+.lead {
+  max-width: 620px;
+  margin: 0 auto 28px;
+  color: #555;
+  font-size: clamp(14px, 1.4vw, 16px);
+}
+
+/* ============ Buttons ============ */
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn-primary {
+  background: #1c1c1c;
+  color: #f7f6f3;
+}
+
+.btn-primary:hover { background: #b08a3e; color: #fff; }
+
+.btn-outline {
+  background: transparent;
+  border-color: #1c1c1c;
+  color: #1c1c1c;
+}
+
+.btn-outline:hover {
+  background: #1c1c1c;
+  color: #f7f6f3;
+}
+
+/* ============ Sections ============ */
+.section { padding: 72px 0; }
+
+.section-alt { background: #efede8; }
+
+.section-title {
+  text-align: center;
+  font-size: clamp(20px, 2.4vw, 24px);
+  font-weight: 600;
+  margin: 0 0 8px;
+  letter-spacing: -0.3px;
+}
+
+.section-sub {
+  text-align: center;
+  color: #666;
+  margin: 0 0 40px;
+  font-size: 15px;
+}
+
+/* ============ Product Grid ============ */
+/* 18 produk → grid padat, kartu kecil, otomatis responsif */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e6e3dc;
+  border-radius: 6px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+.card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  color: #b08a3e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.card-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.card p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.card-price {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 12px;
+}
+
+.card-price small {
+  font-family: inherit;
+  color: #999;
+  font-weight: 400;
+  font-size: 11px;
+  text-decoration: line-through;
+  margin-left: 5px;
+}
+
+.card .btn {
+  width: 100%;
+  padding: 9px 14px;
+  font-size: 12px;
+}
+
+/* ============ Features ============ */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+}
+
+.feature h3 {
+  font-size: 15px;
+  margin: 0 0 6px;
+  font-weight: 600;
+}
+
+.feature p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+/* ============ Cara Order (Steps) ============ */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.steps li {
+  position: relative;
+  counter-increment: step;
+  background: #ffffff;
+  border: 1px solid #e6e3dc;
+  border-radius: 6px;
+  padding: 22px 26px 22px 88px;
+  min-height: 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.steps li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #b08a3e;
+  color: #f7f6f3;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps li strong {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+}
+
+.steps li span {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* ============ CTA ============ */
+.cta { text-align: center; }
+
+/* ============ Footer ============ */
+.site-footer {
+  border-top: 1px solid #2a2a2a;
+  padding: 28px 0;
+  padding-bottom: calc(28px + env(safe-area-inset-bottom));
+  text-align: center;
+  color: #f7f6f3;            /* ← teks jadi putih */
+  font-size: 13px;
+  background: #1c1c1c;       /* ← background jadi hitam */
+}
+
+/* ============ Responsive ============ */
+
+/* Tablet: 3–4 kolom */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+}
+
+/* HP: 2 kolom */
+@media (max-width: 600px) {
+  .container { padding: 0 16px; }
+
+  .header-inner { height: 60px; gap: 12px; }
+  .nav a { margin-left: 16px; font-size: 13px; }
+  .brand-name { font-size: 15px; }
+
+  .hero { padding: 56px 0 40px; }
+  .section { padding: 48px 0; }
+  .section-sub { margin-bottom: 28px; }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card { padding: 14px 12px; }
+  .card-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .card h3 { font-size: 13px; }
+  .card p { font-size: 11px; margin-bottom: 12px; }
+  .card-price { font-size: 12px; margin-bottom: 10px; }
+  .card .btn { padding: 8px 10px; font-size: 11px; }
+
+  .steps li { padding: 16px 16px 16px 68px; min-height: auto; }
+  .steps li::before {
+    left: 14px;
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+  .steps li strong { font-size: 14px; }
+  .steps li span { font-size: 12px; }
+}
+
+/* HP kecil (≤ 380px): tetap 2 kolom tapi lebih rapat */
+@media (max-width: 380px) {
+  .grid { gap: 10px; }
+  .card { padding: 12px 10px; }
+  .card h3 { font-size: 12px; }
+  .card p { display: none; }   /* sembunyikan deskripsi di layar sangat kecil */
+  .card-price { font-size: 11px; }
+  .card .btn { font-size: 10px; padding: 7px 8px; }
+}
+
+/* =========================================================
+   Rata tengah untuk 3 produk terakhir (khusus desktop)
+   Hanya aktif di layar ≥ 1025px — HP tidak terpengaruh
+   ========================================================= */
+@media (min-width: 1025px) {
+  .grid > *:nth-child(16) {
+    grid-column: 2;
+  }
+}

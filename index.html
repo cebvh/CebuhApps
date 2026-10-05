@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- Security headers versi meta -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>CebuhApps — Premium Apps Pilihan</title>
+  <meta name="description" content="Koleksi aplikasi premium pilihan dengan lisensi resmi." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="logo/favicon.svg" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img class="brand-mark" src="logo/favicon.svg" alt="" width="24" height="24" />
+        <span class="brand-name">CebuhApps</span>
+      </div>
+      <nav class="nav">
+        <a href="#produk">Produk</a>
+        <a href="#cara-order">Cara Order</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container">
+      <h1>APLIKASI PREMIUM HARGA MIRING!</h1>
+      <p class="lead">
+        Pilih dari koleksi aplikasi pilihan kami dan temukan
+        berbagai aplikasi premium untuk kebutuhan hiburan, produktivitas, dan belajar.
+      </p>
+      <a href="#produk" class="btn btn-primary">Lihat Produk</a>
+    </div>
+  </section>
+
+  <!-- ===== Produk ===== -->
+  <section id="produk" class="section">
+    <div class="container">
+      <h2 class="section-title">Koleksi Produk</h2>
+      <p class="section-sub">Pilih aplikasi yang sesuai dengan kebutuhan kamu.</p>
+
+      <!-- Grid produk diisi oleh JS -->
+      <div class="grid" id="product-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== Cara Order ===== -->
+  <section id="cara-order" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Cara Order</h2>
+      <p class="section-sub">Empat langkah mudah untuk memesan produk.</p>
+
+      <ol class="steps" id="steps-list"></ol>
+    </div>
+  </section>
+
+  <!-- ===== Tentang ===== -->
+  <section id="tentang" class="section">
+    <div class="container">
+      <h2 class="section-title">Kenapa Harus Memilih CebuhApps?</h2>
+      <p>CebuhApps adalah premium apps store aman, terpercaya dan sederhana yang
+         menyediakan berbagai pilihan aplikasi premium secara mudah, cepat dan
+         praktis. Kami berusaha memberikan informasi produk yang jelas sehingga
+         pelanggan dapat memilih produk sesuai dengan kebutuhannya.
+      </p>
+      <div class="features">
+        <div class="feature">
+          <h3>Harga Miring</h3>
+          <p>Setiap produk memiliki harga yang sangat terjangkau in this economy.</p>
+        </div>
+        <div class="feature">
+          <h3>Proses Satset</h3>
+          <p>Proses kurang dari 10 menit setelah pembayaran dikonfirmasi.</p>
+        </div>
+        <div class="feature">
+          <h3>Admin Ramah</h3>
+          <p>Bantuan teknis penuh selama masa aktif produk, sesuai yang tertera pada deskripsi produk.</p>
+        </div>
+        <div class="feature">
+          <h3>Garansi</h3>
+          <p>Garansi uang kembali jika produk tidak berfungsi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Kontak / CTA ===== -->
+  <section id="kontak" class="section section-alt">
+    <div class="container cta">
+      <h2 class="section-title">Tunggu Apalagi? Order Sekarang Juga!</h2>
+      <p class="section-sub">Hubungi kami via WhatsApp untuk pemesanan dan pertanyaan.</p>
+      <a
+        class="btn btn-primary"
+        id="wa-general"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Chat via WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> CebuhApps. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
