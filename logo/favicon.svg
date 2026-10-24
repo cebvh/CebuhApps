@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="AppCebuh">
+  <!-- Background kotak dengan sudut membulat -->
+  <rect width="64" height="64" rx="14" fill="#1c1c1c" />
+
+  <!-- Huruf C di KIRI (warna emas) — pakai bentuk & ukuran asli C -->
+  <g transform="translate(-17, 0) scale(1.15)" transform-origin="46 32">
+    <path d="M46 26.5 A11 11 0 1 0 46 43.5 L44 39.8 A7 7 0 1 1 44 30.2 Z"
+          fill="#b08a3e" />
+  </g>
+
+  <!-- Huruf A di KANAN (warna putih) — pakai bentuk & ukuran asli A -->
+  <g transform="translate(20, 0) scale(1.00)" transform-origin="20 32">
+    <path d="M10 46 L20 22 L30 46 L26 46 L24 41 L16 41 L14 46 Z
+             M17.2 37 L22.8 37 L20 30 Z"
+          fill="#f7f6f3" />
+  </g>
+
+  <!-- Bintang tetap di kanan atas -->
+  <path d="M50 8 L51.8 13.2 L57 15 L51.8 16.8 L50 22 L48.2 16.8 L43 15 L48.2 13.2 Z"
+        fill="#b08a3e" />
+</svg>
